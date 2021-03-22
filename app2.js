@@ -167,40 +167,103 @@ for(let i of arrayJson){
 */
 
 //apiEndpoint en una URL (Dreccion)
-let apiEndpoint = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=8b8f954a78e74eb897c312e04c24adc0";
+//                                                      PAIS : US, CO                    
+/*let apiEndpoint = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=8b8f954a78e74eb897c312e04c24adc0";*/
 
 // Necesito esperar hasta que llegen los datos para poder continuar con el flujo del programa ASYNC
 
-async function getNews(){
+/*async function getNews(){
 
-    let cards = Document.getElementById("cards");
-
-     //Trae los datos
+    let cards = document.getElementById("cards");
+    //Trae los datos
     let response = await fetch(apiEndpoint);
     //Traiga el JSON de esos datos
     let news = await response.json(); 
 
-    console.log(news.articles)
-}
-
-getNews();
-
-    news.articles.forEach(function(element){
+    news.articles.forEach(function(i){
         let template = `
         <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-        <div class="card">
-            <div class="card-body">
-              ${}
-            </div>
+            <div class="card">
+            <img src="${i.urlToImage}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">${i.title}</h5>
+                <p class="card-text">${i.description}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
           </div>
-    </div>
-        `
-    }) 
-     //[2,3,4,5,6]
-    for(i of news.articles){}
-
-    console.log(news.articles);
+        </div>`;
+    cards.innerHTML += template;
+    });
+    
 }
 
 getNews();
 
+
+const getNew = () =>{
+    alert("Holi");
+}
+ 
+
+
+async function fetchData(){
+
+}
+
+const fetchData = async () =>{
+
+}
+
+data.forEach(function data (){
+
+})
+
+data.forEach()=>{
+
+}*/
+
+
+let apiEndpoint = "https://newsapi.org/v2/top-headlines?country=co&category=business&apiKey=8b8f954a78e74eb897c312e04c24adc0";
+
+//Con funcion flecha
+//         AQUI
+const getNews = async() =>{
+
+    let cards = document.getElementById("cards");
+    //Trae los datos
+    let response = await fetch(apiEndpoint);
+    //Traiga el JSON de esos datos
+    let news = await response.json(); 
+    //GARANTICAR QUE VA INICIAR VACIO
+    cards.innerHTML = ""; 
+//               AQUI
+    news.articles.forEach((i) =>{
+        let template = `
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="card">
+            <img src="${i.urlToImage}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">${i.title}</h5>
+                <p class="card-text">${i.description}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+          </div>
+        </div>`;
+    cards.innerHTML += template;
+    });
+    
+}
+
+/*const fetchData = async () =>{
+    let country = document.getElementById("country").value;
+    apiEndpoint = `https://newsapi.org/v2/top-headlines?country=${country}&category=business&apiKey=8b8f954a78e74eb897c312e04c24adc0`;
+    await getNews();
+}*/
+
+const fetchData = async () =>{
+    let country = document.getElementById("country").value;
+    let category = document.getElementById("category").value;
+    apiEndpoint = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=8b8f954a78e74eb897c312e04c24adc0`;
+    await getNews();
+}
+getNews();
