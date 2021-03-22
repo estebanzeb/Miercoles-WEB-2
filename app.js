@@ -1,5 +1,5 @@
   
-const fetchData = async (country="co", category="business") => {
+/*const fetchData = async (country="co", category="business") => {
     let response = await fetch(`http://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=f666b1a15c8940dc9df48ce0596933fa`);
     let dataJson = await response.json();
     return dataJson.articles;
@@ -24,4 +24,4 @@ const fetchData = async (country="co", category="business") => {
       container.innerHTML += alertTemplate;
     });
   }
-  renderData();
+  renderData();*/

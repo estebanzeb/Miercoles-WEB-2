@@ -172,11 +172,35 @@ let apiEndpoint = "https://newsapi.org/v2/top-headlines?country=us&category=busi
 // Necesito esperar hasta que llegen los datos para poder continuar con el flujo del programa ASYNC
 
 async function getNews(){
+
+    let cards = Document.getElementById("cards");
+
      //Trae los datos
     let response = await fetch(apiEndpoint);
     //Traiga el JSON de esos datos
     let news = await response.json(); 
+
     console.log(news.articles)
 }
 
 getNews();
+
+    news.articles.forEach(function(element){
+        let template = `
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+        <div class="card">
+            <div class="card-body">
+              ${}
+            </div>
+          </div>
+    </div>
+        `
+    }) 
+     //[2,3,4,5,6]
+    for(i of news.articles){}
+
+    console.log(news.articles);
+}
+
+getNews();
+
