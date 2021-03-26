@@ -1,7 +1,6 @@
 /*let num1 = prompt("Ingrese el primer número");
 let num2 = prompt("Ingrese el segundo número");
 let num3 = prompt("Ingrese el tercer número");
-
 if (num1 > num2 && num1 > num3){
     console.log(`El numero mayor es el ${num1}`); 
 }else
@@ -10,25 +9,20 @@ if (num1 > num2 && num1 > num3){
     }else{
         console.log(`El numero mayor es el ${num3}`); 
     }
-
-
 for (let i=0; i<10; i++){
     console.log(i);
 }
-
 count =0;
 while(count <5){
     console.log(cout);
     count++;
 }
-
 switch(variable){ //selector
     case 1: //mismo tipo
         break;
     case 2:
         break;
 }
-
 */
 
 //Evento
@@ -38,31 +32,23 @@ switch(variable){ //selector
 myArray.push("Juan");
 console.log(myArray);
 myArray [0]= "Esteban";
-
 for (let i=0; i<myArray.length; i++){
     console.log(myArray[i]);
 }
-
 for(let i=0; i<myArray.length; i++){
     let temaplete = `<div class="alert alert-primary" role="alert">
     ${myArray[i]}
   </div>`
     document.write(temaplete);
 }
-
-
 for(let i=0; i<myArray.length; i++){
     document.write(`<h1>${myArray[i]}</h1>`);
 }
-
 for(let i=0; i<5; i++){
     document.write("<h1>Hola</h1>");
 }
-
-
 let myTicket= [5,8,3,12,5,15];
 myTicket[3]=24; //CAMBIANDO EL VALOR EN LA POSICION 3 DE UNA ARREGLO (myTicket)
-
 for (let i=0; i<6; i++){
     console-log(myTicket[i])
 }*/
@@ -96,7 +82,6 @@ for (let i=0; i<6; i++){
     </div>`;
     document.write(template);
 }
-
 let myObject = {
     cominedo: "Acción y efecto de comer",
     age: 50,
@@ -112,7 +97,6 @@ let myObject = {
 console.log(myObject.money);
 console.log(myObject.porpeties[0]);
 console.log(myObject.data.test);
-
 let userData = {
     name: "Pedro",
     age: 52,
@@ -120,7 +104,6 @@ let userData = {
     lastname: "roferto"
 }
 console.log(userData.name);
-
 let arrayJson = [{
     name: "Pablo",
     age: 62,
@@ -142,17 +125,13 @@ let arrayJson = [{
     identification: 51516,
     lastname: "roferto"
 }]
-
 arrayJson.forEach(function(element){
     console.log(element);
 })
-
 function showAlert(name){
     alert(`Hola ${name}`);
 }
-
 let cards = document.getElementById("cards");
-
 for(let i of arrayJson){
     let template = `<div class="col-12 col-sm-12 col-md-12 col-lg-6" 
     onclick="showAlert('${i.name}')"> 
@@ -173,13 +152,11 @@ for(let i of arrayJson){
 // Necesito esperar hasta que llegen los datos para poder continuar con el flujo del programa ASYNC
 
 /*async function getNews(){
-
     let cards = document.getElementById("cards");
     //Trae los datos
     let response = await fetch(apiEndpoint);
     //Traiga el JSON de esos datos
     let news = await response.json(); 
-
     news.articles.forEach(function(i){
         let template = `
         <div class="col-12 col-sm-12 col-md-6 col-lg-6">
@@ -196,30 +173,18 @@ for(let i of arrayJson){
     });
     
 }
-
 getNews();
-
-
 const getNew = () =>{
     alert("Holi");
 }
  
-
-
 async function fetchData(){
-
 }
-
 const fetchData = async () =>{
-
 }
-
 data.forEach(function data (){
-
 })
-
 data.forEach()=>{
-
 }*/
 
 
